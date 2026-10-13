@@ -1,0 +1,53 @@
+:root{--bg:#0b0f1f;--sheet:#121833cc;--ink:#e9ecff;--muted:#a4abd6;--line:#2c3566;--cy:#5ef2ff;--vi:#b78cff;--pk:#ff7ad9;
+font-family:"Outfit","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:
+radial-gradient(900px 500px at 85% -10%,#3b1d6e55,transparent),
+radial-gradient(700px 500px at -10% 110%,#0d4d6355,transparent),
+linear-gradient(transparent 95%,#ffffff07 95%) 0 0/100% 28px,var(--bg)}
+a{color:var(--cy)}
+.wrap{max-width:1100px;margin:0 auto;padding:20px 16px 40px}
+header{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end;margin-bottom:18px}
+.badge{display:inline-flex;gap:8px;align-items:center;margin:0 0 8px;font-size:.85rem;letter-spacing:.08em;color:var(--cy)}
+.badge span{border:1px solid var(--cy);border-radius:4px;padding:2px 6px;font-weight:600;box-shadow:0 0 10px #5ef2ff55}
+.badge b{font-weight:500}
+h1{margin:0;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.05;background:linear-gradient(90deg,var(--cy),var(--vi),var(--pk));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{margin:.5rem 0 0;color:var(--muted);max-width:40rem}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:4px;background:var(--sheet)}
+.lang button,.tabs button{font:inherit;border:0;background:none;color:var(--ink);padding:.45rem .9rem;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed=true]{background:linear-gradient(90deg,var(--cy),var(--vi));color:#0b0f1f;font-weight:600}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.tabs button{border:1px solid var(--line);background:var(--sheet)}
+.tabs button[aria-current=true]{border-color:var(--cy);box-shadow:0 0 0 1px var(--cy) inset,0 0 14px #5ef2ff44}
+.grid{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:820px){.grid{grid-template-columns:1.1fr 1fr}}
+.house{margin:0;border:1px solid var(--line);border-radius:18px;background:var(--sheet);padding:10px;backdrop-filter:blur(6px)}
+.house svg{width:100%;height:auto;display:block}
+.room rect{fill:#5ef2ff0d;stroke:#7d86c7;stroke-width:1.2;rx:8;cursor:pointer;transition:.2s}
+.room text{fill:var(--ink);font-size:13px;text-anchor:middle;pointer-events:none}
+.room:hover rect,.room:focus rect{fill:#b78cff22;stroke:var(--vi)}
+.room.on rect{fill:#5ef2ff22;stroke:var(--cy);stroke-width:2}
+.room:focus{outline:none}
+.svgnote{fill:var(--muted);font-size:10px}
+.float{animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@media(prefers-reduced-motion:reduce){.float,.ring{animation:none!important}}
+.panel{border:1px solid var(--line);border-radius:18px;background:var(--sheet);padding:20px}
+.eyebrow{margin:0;color:var(--pk);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.panel h2{margin:.2rem 0 .4rem;font-size:1.6rem}
+.blurb{color:var(--muted);line-height:1.6}
+.apps{display:grid;gap:12px;margin-top:14px}
+.card{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:12px;background:#0b0f1f99;text-decoration:none;color:var(--ink)}
+.card:hover{border-color:var(--cy)}
+.card img{width:52px;height:52px;border-radius:12px;flex:none}
+.card h3{margin:0;font-size:1.05rem}
+.card p{margin:.25rem 0 0;color:var(--muted);font-size:.92rem;line-height:1.5}
+.tag{display:inline-block;margin-top:6px;font-size:.75rem;color:var(--cy);border:1px solid #5ef2ff55;border-radius:999px;padding:1px 8px}
+.empty{border:1px dashed var(--line);border-radius:14px;padding:14px;color:var(--muted)}
+.portal{display:flex;gap:18px;align-items:center;margin-top:22px;border:1px solid var(--line);border-radius:18px;padding:18px;background:var(--sheet)}
+.portal h3{margin:0 0 .3rem}.portal p{margin:.2rem 0;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:14px}
+.links a{font-weight:600}
+.ring{flex:none;width:58px;height:58px;border-radius:50%;background:conic-gradient(var(--cy),var(--vi),var(--pk),var(--cy));-webkit-mask:radial-gradient(circle,transparent 52%,#000 54%);mask:radial-gradient(circle,transparent 52%,#000 54%);animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+footer{margin-top:24px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}

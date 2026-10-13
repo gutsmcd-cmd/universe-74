@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Universe 74 App House</title>
+<meta name="description" content="The App House, one timeline over. Same family of free apps — but in Universe 74, apps are allowed online.">
+<meta name="theme-color" content="#0b0f1f">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <p class="badge"><span>U74</span><b data-i="kicker"></b></p>
+      <h1 data-i="title"></h1>
+      <p class="lede" data-i="lede"></p>
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="en">English</button><button data-lang="ja">日本語</button>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs" aria-label="Rooms"></nav>
+
+  <main class="grid">
+    <figure class="house" aria-hidden="false">
+      <svg viewBox="0 0 400 330" id="house" role="img" aria-labelledby="houseTitle">
+        <title id="houseTitle">Universe 74 house</title>
+        <defs>
+          <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#5ef2ff"/><stop offset=".5" stop-color="#b78cff"/><stop offset="1" stop-color="#ff7ad9"/>
+          </linearGradient>
+          <filter id="glow"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <g filter="url(#glow)" fill="none" stroke="url(#g)" stroke-width="2.2" stroke-linejoin="round">
+          <path d="M40 130 L200 30 L360 130"/>
+          <path d="M60 118 V300 H340 V118"/>
+          <ellipse cx="200" cy="18" rx="46" ry="7" opacity=".6"/>
+          <path d="M290 64 V40 h22 v38" opacity=".8"/>
+        </g>
+        <g id="rooms"></g>
+        <g class="float"><circle cx="372" cy="70" r="5" fill="#5ef2ff"/><circle cx="28" cy="90" r="3" fill="#ff7ad9"/></g>
+        <text x="200" y="322" text-anchor="middle" class="svgnote" data-i="drawnote"></text>
+      </svg>
+    </figure>
+
+    <section class="panel" aria-live="polite">
+      <p class="eyebrow" data-i="roomword"></p>
+      <h2 id="roomName"></h2>
+      <p id="roomBlurb" class="blurb"></p>
+      <div id="apps" class="apps"></div>
+    </section>
+  </main>
+
+  <aside class="portal">
+    <div class="ring" aria-hidden="true"></div>
+    <div>
+      <h3 data-i="portalH"></h3>
+      <p data-i="portalP"></p>
+      <p class="links">
+        <a href="https://app-house.grok.me" data-i="toU0"></a>
+        <a href="https://gutsmcd-cmd.github.io/free-apps/" data-i="toFam"></a>
+      </p>
+    </div>
+  </aside>
+
+  <footer>
+    <p data-i="foot"></p>
+    <p><a href="https://github.com/gutsmcd-cmd/universe-74">GitHub</a></p>
+  </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
