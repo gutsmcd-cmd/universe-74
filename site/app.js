@@ -43,6 +43,9 @@ const APPS = [
   { room: 'study', url: 'https://gutsmcd-cmd.github.io/u74-songs/', icon: 'https://gutsmcd-cmd.github.io/u74-songs/icons/icon-192.png', emoji: '🎵',
     en: ['Study Songs', 'Turn a topic or your notes into catchy memory lyrics (rap, pop, nursery or chant), then play them over a simple beat with karaoke-style lyrics.'],
     ja: ['歌で覚える', 'テーマやノートを、覚えやすい歌詞（ラップ・ポップ・童謡・掛け声）に変身。シンプルなビートに合わせて、カラオケ風に歌詞を表示します。'] },
+  { room: 'lounge', url: 'https://gutsmcd-cmd.github.io/u74-garden/', icon: 'https://gutsmcd-cmd.github.io/u74-garden/icons/icon-192.png', emoji: '🌸',
+    en: ['Sakura Matcha Garden', 'Add tiny daily habits and to-dos. Each one you finish grows a sakura, bamboo, moss or tea bush in a pink-and-green garden that follows the seasons and the time of day. Streaks and a gentle daily summary; data stays on your device.'],
+    ja: ['さくら抹茶の庭', '毎日の小さな習慣やToDoを追加。ひとつできるたびに、桜・竹・苔・茶の木が育ちます。庭は季節や時間帯で移り変わり、連続記録とやさしい一日のまとめつき。データは端末の中だけ。'] },
 ]
 let lang = localStorage.getItem('u74-lang') || (navigator.language.startsWith('ja') ? 'ja' : 'en')
 let room = location.hash.slice(1) || 'foyer'
