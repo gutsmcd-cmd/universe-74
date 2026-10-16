@@ -46,6 +46,9 @@ const APPS = [
   { room: 'lounge', url: 'https://gutsmcd-cmd.github.io/u74-garden/', icon: 'https://gutsmcd-cmd.github.io/u74-garden/icons/icon-192.png', emoji: '🌸',
     en: ['Sakura Matcha Garden', 'Add tiny daily habits and to-dos. Each one you finish grows a sakura, bamboo, moss or tea bush in a pink-and-green garden that follows the seasons and the time of day. Streaks and a gentle daily summary; data stays on your device.'],
     ja: ['さくら抹茶の庭', '毎日の小さな習慣やToDoを追加。ひとつできるたびに、桜・竹・苔・茶の木が育ちます。庭は季節や時間帯で移り変わり、連続記録とやさしい一日のまとめつき。データは端末の中だけ。'] },
+  { room: 'kitchen', url: 'https://gutsmcd-cmd.github.io/u74-picture-todo/', icon: 'https://gutsmcd-cmd.github.io/u74-picture-todo/icons/icon-192.png', emoji: '🖼️',
+    en: ['Picture To-Do', 'Paste or type a to-do list and every task becomes a picture card with its own pink-and-green illustration. Tap a card to tick it off with a burst of petals; drag to reorder. Pictures are made by a free online AI and saved on your device.'],
+    ja: ['絵でやること', 'やることリストを貼りつけると、ひとつずつ絵のカードに。タップで花びらが舞って完了、ドラッグで並べ替え。絵は無料のオンラインAIで作り、端末に保存します。'] },
 ]
 let lang = localStorage.getItem('u74-lang') || (navigator.language.startsWith('ja') ? 'ja' : 'en')
 let room = location.hash.slice(1) || 'foyer'
