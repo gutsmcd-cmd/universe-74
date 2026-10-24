@@ -49,6 +49,9 @@ const APPS = [
   { room: 'kitchen', url: 'https://gutsmcd-cmd.github.io/u74-picture-todo/', icon: 'https://gutsmcd-cmd.github.io/u74-picture-todo/icons/icon-192.png', emoji: '🖼️',
     en: ['Picture To-Do', 'Paste or type a to-do list and every task becomes a picture card with its own pink-and-green illustration. Tap a card to tick it off with a burst of petals; drag to reorder. Pictures are made by a free online AI and saved on your device.'],
     ja: ['絵でやること', 'やることリストを貼りつけると、ひとつずつ絵のカードに。タップで花びらが舞って完了、ドラッグで並べ替え。絵は無料のオンラインAIで作り、端末に保存します。'] },
+  { room: 'workshop', url: 'https://gutsmcd-cmd.github.io/moms-photo-studio/', icon: 'https://gutsmcd-cmd.github.io/moms-photo-studio/icons/icon-192.png', emoji: '📸',
+    en: ["Mom's Photo Studio", 'A simple photo editor with big buttons, made for the phone. Crop, turn, brighten, fix red eyes, remove things, blur the background, sharpen, add words, shapes or another picture, then paint it all as watercolour, oil, pencil and more. Save, share or print.'],
+    ja: ['ママのフォトスタジオ', '大きなボタンでスマホ向けのかんたん写真編集。切り抜き・回転・明るさ・赤目なおし・いらない物を消す・背景ぼかし・くっきり。文字や図形や別の絵も重ねて、水彩・油絵・鉛筆画などに描き変え。保存・共有・印刷も。'] },
 ]
 let lang = localStorage.getItem('u74-lang') || (navigator.language.startsWith('ja') ? 'ja' : 'en')
 let room = location.hash.slice(1) || 'foyer'
