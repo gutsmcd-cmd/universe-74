@@ -52,6 +52,9 @@ const APPS = [
   { room: 'workshop', url: 'https://gutsmcd-cmd.github.io/moms-photo-studio/', icon: 'https://gutsmcd-cmd.github.io/moms-photo-studio/icons/icon-192.png', emoji: '📸',
     en: ["Mom's Photo Studio", 'A simple photo editor with big buttons, made for the phone. Crop, turn, brighten, fix red eyes, remove things, blur the background, sharpen, add words, shapes or another picture, then paint it all as watercolour, oil, pencil and more. Save, share or print.'],
     ja: ['ママのフォトスタジオ', '大きなボタンでスマホ向けのかんたん写真編集。切り抜き・回転・明るさ・赤目なおし・いらない物を消す・背景ぼかし・くっきり。文字や図形や別の絵も重ねて、水彩・油絵・鉛筆画などに描き変え。保存・共有・印刷も。'] },
+  { room: 'study', url: 'https://gutsmcd-cmd.github.io/message-decoder/', icon: 'https://gutsmcd-cmd.github.io/message-decoder/icon.svg', emoji: '🧩',
+    en: ['Message Decoder', 'Paste a confusing message, in English or Japanese, and a free online AI works out what it probably says, sums it up in one line, and marks the parts it is not sure about with its best guesses.'],
+    ja: ['メッセージ解読', 'わかりにくいメッセージを貼りつけると、無料のオンラインAIが「たぶんこう言いたい」を読み解き、一行でまとめ、あいまいな部分には印と予想をつけます。日本語と英語に対応。'] },
 ]
 let lang = localStorage.getItem('u74-lang') || (navigator.language.startsWith('ja') ? 'ja' : 'en')
 let room = location.hash.slice(1) || 'foyer'
