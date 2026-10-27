@@ -43,6 +43,10 @@ h1{margin:0;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.05;background:linea
 .card h3{margin:0;font-size:1.05rem}
 .card p{margin:.25rem 0 0;color:var(--muted);font-size:.92rem;line-height:1.5}
 .tag{display:inline-block;margin-top:6px;font-size:.75rem;color:var(--cy);border:1px solid #5ef2ff55;border-radius:999px;padding:1px 8px}
+.inst{margin:-6px 0 4px 76px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+.inst-btn{display:inline-block;padding:7px 14px;border-radius:999px;border:1px solid var(--cy);color:var(--cy);text-decoration:none;font-size:.9rem}
+.inst-btn:hover{background:#5ef2ff22}
+.inst p{margin:0;flex-basis:100%;color:var(--muted);font-size:.78rem;line-height:1.45}
 .empty{border:1px dashed var(--line);border-radius:14px;padding:14px;color:var(--muted)}
 .portal{display:flex;gap:18px;align-items:center;margin-top:22px;border:1px solid var(--line);border-radius:18px;padding:18px;background:var(--sheet)}
 .portal h3{margin:0 0 .3rem}.portal p{margin:.2rem 0;color:var(--muted)}

@@ -8,7 +8,7 @@ const T = {
     portalP: 'Homesick? The original house is one step away. Over there, everything works offline.',
     toU0: 'Back to Universe 0 →', toFam: 'The app collection (U0) →',
     foot: 'Still free. Still no ads. Still no logins. The internet is merely allowed here.',
-    open: 'Open', online: 'May use the internet', soon: 'Nothing has moved in yet. The timeline is still loading.',
+    open: 'Open', install: 'Install app', apkHint: 'For Android. First time only: if asked about installing unknown apps, turn on “Allow from this source”, then go back.', online: 'May use the internet', soon: 'Nothing has moved in yet. The timeline is still loading.',
   },
   ja: {
     kicker: 'アプリ・もうひとつの世界線',
@@ -19,7 +19,7 @@ const T = {
     portalP: '元の世界が恋しくなったら、本家の家はすぐそこです。あちらでは何でもオフラインで動きます。',
     toU0: 'ユニバース0に戻る →', toFam: 'アプリ集（U0）へ →',
     foot: '無料、広告なし、ログイン不要なのは同じです。こちらではネットが「使ってもいい」だけ。',
-    open: '開く', online: 'ネットを使うことがあります', soon: 'まだ誰も引っ越してきていません。世界線を読み込み中です。',
+    open: '開く', install: 'アプリを入れる', apkHint: 'Android用。最初の1回だけ：「不明なアプリのインストール」の画面が出たら、「この提供元のアプリを許可」をオンにして戻ります。', online: 'ネットを使うことがあります', soon: 'まだ誰も引っ越してきていません。世界線を読み込み中です。',
   },
 }
 const ROOMS = [
@@ -37,22 +37,22 @@ const ROOMS = [
     ja: ['遊び部屋', 'サイコロはいつも74が出ます。ゲームと遊び。'] },
 ]
 const APPS = [
-  { room: 'study', url: 'https://gutsmcd-cmd.github.io/u74-summarize/', icon: 'https://gutsmcd-cmd.github.io/u74-summarize/icons/icon-192.png', emoji: '📚',
+  { room: 'study', url: 'https://gutsmcd-cmd.github.io/u74-summarize/', apk: 'https://gutsmcd-cmd.github.io/free-apps/apk/u74-summarize.apk', icon: 'https://gutsmcd-cmd.github.io/u74-summarize/icons/icon-192.png', emoji: '📚',
     en: ['Summarizer', 'Open a PDF, EPUB or text file, or paste text, and get a summary: short, detailed, chapter by chapter, or for kids. In English or Japanese. The AI runs in your browser; no key needed.'],
     ja: ['まとめ屋', 'PDF・EPUB・テキストを開くか、文章を貼りつけるだけで要約します。ひとことで・くわしく・章ごと・子ども向けから選べて、日本語でも英語でも。AIはブラウザの中で動くので、キーは不要です。'] },
-  { room: 'study', url: 'https://gutsmcd-cmd.github.io/u74-songs/', icon: 'https://gutsmcd-cmd.github.io/u74-songs/icons/icon-192.png', emoji: '🎵',
+  { room: 'study', url: 'https://gutsmcd-cmd.github.io/u74-songs/', apk: 'https://gutsmcd-cmd.github.io/free-apps/apk/u74-songs.apk', icon: 'https://gutsmcd-cmd.github.io/u74-songs/icons/icon-192.png', emoji: '🎵',
     en: ['Study Songs', 'Turn a topic or your notes into catchy memory lyrics (rap, pop, nursery or chant), then play them over a simple beat with karaoke-style lyrics.'],
     ja: ['歌で覚える', 'テーマやノートを、覚えやすい歌詞（ラップ・ポップ・童謡・掛け声）に変身。シンプルなビートに合わせて、カラオケ風に歌詞を表示します。'] },
-  { room: 'lounge', url: 'https://gutsmcd-cmd.github.io/u74-garden/', icon: 'https://gutsmcd-cmd.github.io/u74-garden/icons/icon-192.png', emoji: '🌸',
+  { room: 'lounge', url: 'https://gutsmcd-cmd.github.io/u74-garden/', apk: 'https://gutsmcd-cmd.github.io/free-apps/apk/u74-garden.apk', icon: 'https://gutsmcd-cmd.github.io/u74-garden/icons/icon-192.png', emoji: '🌸',
     en: ['Sakura Matcha Garden', 'Add tiny daily habits and to-dos. Each one you finish grows a sakura, bamboo, moss or tea bush in a pink-and-green garden that follows the seasons and the time of day. Streaks and a gentle daily summary; data stays on your device.'],
     ja: ['さくら抹茶の庭', '毎日の小さな習慣やToDoを追加。ひとつできるたびに、桜・竹・苔・茶の木が育ちます。庭は季節や時間帯で移り変わり、連続記録とやさしい一日のまとめつき。データは端末の中だけ。'] },
-  { room: 'kitchen', url: 'https://gutsmcd-cmd.github.io/u74-picture-todo/', icon: 'https://gutsmcd-cmd.github.io/u74-picture-todo/icons/icon-192.png', emoji: '🖼️',
+  { room: 'kitchen', url: 'https://gutsmcd-cmd.github.io/u74-picture-todo/', apk: 'https://gutsmcd-cmd.github.io/free-apps/apk/u74-picture-todo.apk', icon: 'https://gutsmcd-cmd.github.io/u74-picture-todo/icons/icon-192.png', emoji: '🖼️',
     en: ['Picture To-Do', 'Paste or type a to-do list and every task becomes a picture card with its own pink-and-green illustration. Tap a card to tick it off with a burst of petals; drag to reorder. Pictures are made by a free online AI and saved on your device.'],
     ja: ['絵でやること', 'やることリストを貼りつけると、ひとつずつ絵のカードに。タップで花びらが舞って完了、ドラッグで並べ替え。絵は無料のオンラインAIで作り、端末に保存します。'] },
-  { room: 'workshop', url: 'https://gutsmcd-cmd.github.io/moms-photo-studio/', icon: 'https://gutsmcd-cmd.github.io/moms-photo-studio/icons/icon-192.png', emoji: '📸',
+  { room: 'workshop', url: 'https://gutsmcd-cmd.github.io/moms-photo-studio/', apk: 'https://gutsmcd-cmd.github.io/free-apps/apk/moms-photo-studio.apk', icon: 'https://gutsmcd-cmd.github.io/moms-photo-studio/icons/icon-192.png', emoji: '📸',
     en: ["Mom's Photo Studio", 'A simple photo editor with big buttons, made for the phone. Crop, turn, brighten, fix red eyes, remove things, blur the background, sharpen, add words, shapes or another picture, then paint it all as watercolour, oil, pencil and more. Save, share or print.'],
     ja: ['ママのフォトスタジオ', '大きなボタンでスマホ向けのかんたん写真編集。切り抜き・回転・明るさ・赤目なおし・いらない物を消す・背景ぼかし・くっきり。文字や図形や別の絵も重ねて、水彩・油絵・鉛筆画などに描き変え。保存・共有・印刷も。'] },
-  { room: 'study', url: 'https://gutsmcd-cmd.github.io/message-decoder/', icon: 'https://gutsmcd-cmd.github.io/message-decoder/icon.svg', emoji: '🧩',
+  { room: 'study', url: 'https://gutsmcd-cmd.github.io/message-decoder/', apk: 'https://gutsmcd-cmd.github.io/free-apps/apk/message-decoder.apk', icon: 'https://gutsmcd-cmd.github.io/message-decoder/icon.svg', emoji: '🧩',
     en: ['Message Decoder', 'Paste a confusing message, in English or Japanese, and a free online AI works out what it probably says, sums it up in one line, and marks the parts it is not sure about with its best guesses.'],
     ja: ['メッセージ解読', 'わかりにくいメッセージを貼りつけると、無料のオンラインAIが「たぶんこう言いたい」を読み解き、一行でまとめ、あいまいな部分には印と予想をつけます。日本語と英語に対応。'] },
 ]
@@ -94,6 +94,11 @@ function render() {
     c.querySelector('img').onerror = e => { e.target.replaceWith(Object.assign(document.createElement('span'), { textContent: a.emoji, style: 'font-size:40px;width:52px;text-align:center' })) }
     c.querySelector('h3').textContent = a[lang][0]; c.querySelector('p').textContent = a[lang][1]
     box.append(c)
+    if (a.apk) {
+      const d = document.createElement('div'); d.className = 'inst'
+      const b = Object.assign(document.createElement('a'), { className: 'inst-btn', href: a.apk, textContent: '🤖 ' + t.install }); b.setAttribute('download', '')
+      d.append(b, Object.assign(document.createElement('p'), { textContent: t.apkHint })); box.append(d)
+    }
   }
 }
 function go(id) { room = id; history.replaceState(null, '', '#' + id); render() }
