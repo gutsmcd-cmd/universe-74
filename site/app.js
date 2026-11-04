@@ -58,6 +58,9 @@ const APPS = [
   { room: 'study', url: 'https://gutsmcd-cmd.github.io/message-decoder/', apk: 'https://gutsmcd-cmd.github.io/free-apps/apk/message-decoder.apk', icon: 'https://gutsmcd-cmd.github.io/message-decoder/icon.svg', emoji: '🧩',
     en: ['Message Decoder', 'Paste a confusing message, in English or Japanese, and a free online AI works out what it probably says, sums it up in one line, and marks the parts it is not sure about with its best guesses.'],
     ja: ['メッセージ解読', 'わかりにくいメッセージを貼りつけると、無料のオンラインAIが「たぶんこう言いたい」を読み解き、一行でまとめ、あいまいな部分には印と予想をつけます。日本語と英語に対応。'] },
+  { room: 'study', url: 'https://gutsmcd-cmd.github.io/wakariyasuku/', icon: 'https://gutsmcd-cmd.github.io/wakariyasuku/icons/icon-192.png', emoji: '✨',
+    en: ['Make It Clear', 'Paste or photograph hard text (forms, letters, notices) and a free online AI rewrites it in plain words. Needs internet.'],
+    ja: ['わかりやすく', '難しい文章（書類・手紙・お知らせ）を貼りつけるか写真をとると、無料のオンラインAIがやさしい言葉に言いかえます。インターネットが必要です。'] },
 ]
 let lang = localStorage.getItem('u74-lang') || (navigator.language.startsWith('ja') ? 'ja' : 'en')
 let room = location.hash.slice(1) || 'foyer'
